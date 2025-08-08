@@ -1,0 +1,428 @@
+/* AdminDashboard.css */
+.admin-dashboard {
+  padding: 1.5rem;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.admin-dashboard h2 {
+  margin: 0 0 2rem 0;
+  color: #1f2937;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Sales Chart Section */
+.sales-chart {
+  margin-bottom: 2rem;
+}
+
+/* Chart Grid Layout */
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.donut-chart,
+.top-selling-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Geo Section */
+.geo-section {
+  margin-bottom: 2rem;
+}
+
+/* Stock Alert Section */
+.stock-alert-section {
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+  
+  .admin-dashboard h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .chart-grid {
+    gap: 1rem;
+  }
+}
+
+/* ===== KPICards.css ===== */
+.kpi-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-cards .card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-cards .card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.kpi-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.kpi-cards .card:hover::before {
+  opacity: 1;
+  left: -30%;
+  top: -30%;
+}
+
+.kpi-cards .card:nth-child(1) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.kpi-cards .card:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.kpi-cards .card:nth-child(3) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.kpi-cards .card:nth-child(4) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.kpi-cards .card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.kpi-cards .card h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.kpi-cards .card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .kpi-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .kpi-cards .card {
+    padding: 1.5rem;
+  }
+  
+  .kpi-cards .card .icon {
+    font-size: 2rem;
+  }
+  
+  .kpi-cards .card h3 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ===== SalesChart.css ===== */
+.chart-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  height: 100%;
+}
+
+.chart-card h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+}
+
+.chart-card .recharts-wrapper {
+  font-size: 0.875rem;
+}
+
+.chart-card .recharts-tooltip-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card .recharts-default-tooltip {
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== GeoDistribution.css ===== */
+.geo-distribution {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.geo-distribution h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+}
+
+.geo-distribution table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.geo-distribution thead {
+  background: #f8fafc;
+}
+
+.geo-distribution th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.geo-distribution td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.geo-distribution tr:hover {
+  background: #f8fafc;
+}
+
+.geo-distribution tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== RecentOrdersTable.css ===== */
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  height: 100%;
+}
+
+.table-card h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-card thead {
+  background: #f8fafc;
+}
+
+.table-card th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.table-card td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.table-card tr:hover {
+  background: #f8fafc;
+}
+
+.table-card tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status badges */
+.table-card td:nth-child(4) {
+  font-weight: 500;
+}
+
+.table-card tr td:nth-child(4):contains("pending") {
+  color: #f59e0b;
+}
+
+.table-card tr td:nth-child(4):contains("delivered") {
+  color: #10b981;
+}
+
+.table-card tr td:nth-child(4):contains("cancelled") {
+  color: #ef4444;
+}
+
+/* ===== StockAlerts.css ===== */
+.table-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table-card ul li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  transition: background-color 0.2s ease;
+}
+
+.table-card ul li:hover {
+  background: #f8fafc;
+}
+
+.table-card ul li:last-child {
+  border-bottom: none;
+}
+
+.table-card ul li::before {
+  content: '⚠️';
+  margin-right: 0.5rem;
+  color: #f59e0b;
+}
+
+/* Empty state */
+.table-card ul:empty::after {
+  content: 'No low stock items';
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* ===== TopSellingProducts.css ===== */
+.table-card .apexcharts-canvas {
+  margin: 0 auto;
+}
+
+.table-card .apexcharts-legend {
+  justify-content: center !important;
+}
+
+.table-card .apexcharts-legend-series {
+  margin: 0 8px !important;
+}
+
+.table-card .apexcharts-legend-text {
+  font-size: 13px !important;
+  color: #6b7280 !important;
+}
+
+.table-card p {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-card {
+    padding: 1rem;
+  }
+  
+  .table-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table-card th,
+  .table-card td {
+    padding: 0.5rem;
+    font-size: 0.8125rem;
+  }
+  
+  .geo-distribution th:nth-child(3),
+  .geo-distribution td:nth-child(3) {
+    display: none;
+  }
+  
+  .table-card table {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-card,
+  .table-card {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+  
+  .chart-card h3,
+  .table-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+}

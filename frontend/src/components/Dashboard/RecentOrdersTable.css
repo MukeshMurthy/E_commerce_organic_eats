@@ -1,0 +1,27 @@
+.recent-orders {
+  margin-top: 30px;
+}
+
+.recent-orders table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-orders th,
+.recent-orders td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.recent-orders th {
+  background-color: #f2f4f8;
+  color: #333;
+}
+
+.recent-orders tr:last-child td {
+  border-bottom: none;
+}

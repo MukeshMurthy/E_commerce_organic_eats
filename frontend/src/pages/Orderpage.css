@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f4;
+}
+
+/* .order-page {
+  font-family: 'Inter', sans-serif;
+  padding: 40px 60px;
+  margin: 0;
+  background-color: #f4f7f4;
+  min-height: 100vh;
+  color: #2c2c2c;
+  width: 100%;
+  box-sizing: border-box;
+} */
+
+.order-page h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #2c2c2c;
+  border-bottom: 2px solid #2e7d32;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.order-card {
+  background: #fff;
+  border: 1px solid #f0ede7;
+  width: 1000px;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
+.order-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+.order-items {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.order-item span:first-child {
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.order-item span:last-child {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.cancel-btn {
+  margin-top: 15px;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #c62828;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f4f7f4;
+  border-bottom: 1px solid #d3e0d3;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Left Nav - similar to .nav-left */
+.top-navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Nav Items */
+.top-navbar .nav-menu span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c2c2c;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.top-navbar .nav-menu span:hover {
+  color: #2e7d32;
+}
+
+/* Active Nav Item */
+.top-navbar .nav-menu span.active {
+  border-bottom: 2px solid #2e7d32;
+  padding-bottom: 2px;
+  color: #2e7d32;
+}
+
+/* Brand name style */
+.top-navbar .logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c2c2c;
+  letter-spacing: 2px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Optional User Greet Pill */
+.user-greet {
+  background-color: #e5f8e5;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #2f4f2f;
+  font-weight: 500;
+}
+.order-content {
+  padding: 2rem;
+}
+
+.no-orders {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+
+.invoice-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.invoice-btn:hover {
+  background-color: #45a049;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  background-color: #ccc;
+  padding: 8px 14px;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.invoice-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 14px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.invoice-btn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background-color: crimson;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .top-navbar .nav-menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .top-navbar .logo {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,24 @@
+.geo-distribution {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+}
+
+.geo-distribution h3 {
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.geo-distribution table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.geo-distribution th,
+.geo-distribution td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
